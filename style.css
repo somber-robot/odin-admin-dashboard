@@ -1,6 +1,7 @@
 body{
     margin: 0;
     font-family: Roboto;
+    box-sizing: border-box;
 }
 
 .container{
@@ -100,8 +101,8 @@ label[for="search-bar"] svg{
 }
 
 .lower .profile-wrapper{
-    width: 70px;
-    height: 70px;
+    width: 65px;
+    height: 65px;
 }
 
 .lower p{
@@ -197,4 +198,90 @@ label[for="search-bar"] svg{
 .main-content{
     grid-column: 2;
     grid-row: 2;
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #e2e8f0;
+}
+
+.projects{
+    grid-row: 1 / 3;
+    padding: 15px;
+}
+
+.projects > p{
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    background-color: white;
+    border-left: 10px solid orange;
+    border-radius: 10px;
+    height: 180px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 10px 10px -10px rgba(88, 88, 88, 0.626);
+}
+
+.card p{
+    margin: 0;
+}
+
+.project-title{
+    font-size: 19px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.project-desc{
+    color: rgb(101, 101, 101);
+}
+
+.card svg{
+    width: 30px;
+}
+
+.card svg:hover{
+    cursor: pointer;
+    fill: rgba(0, 0, 0, 0.413);
+}
+
+.project-links{
+    margin-top: auto;
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    padding-right: 10px;
+}
+
+.announcements{
+    border: 1px solid blue;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcement-card{
+    border: 1px solid black;
+    flex: auto;
+}
+
+.trending{
+    border: 1px solid rgb(0, 126, 6);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-card{
+    border: 1px solid black;
+    flex: auto;
 }
